@@ -9,7 +9,7 @@ document.getElementById('registration-form').addEventListener('submit', async (e
     const email = e.target.email.value;
 
     try {
-        const response = await fetch('http://localhost:3000/api/submit-form', {
+        const response = await fetch('https://mlsatu-ripunjays-projects-11cff78f.vercel.app/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name, email })
