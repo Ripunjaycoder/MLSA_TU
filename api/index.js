@@ -15,9 +15,9 @@ const pool = new Pool({
   database: process.env.SUPABASE_DATABASE,
   user: process.env.SUPABASE_USER,
   password: process.env.SUPABASE_PASSWORD,
-  port: process.env.SUPABASE_PORT,
-  ssl: { rejectUnauthorized: false }, 
-  connectionTimeoutMillis: 10000, // 10 seconds// Necessary for SSL connections with Supabase
+  port: process.env.SUPABASE_PORT || 5432,
+  ssl: { rejectUnauthorized: false },
+  connectionTimeoutMillis: 10000, // 10 seconds
 });
 
 // Route to test the database connection
@@ -87,3 +87,5 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+module.exports = app; // Important: Export app for Vercel
