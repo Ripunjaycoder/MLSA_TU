@@ -6,6 +6,9 @@ document.getElementById('registration-form').addEventListener('submit', async (e
     const name = e.target.name.value;
     const email = e.target.email.value;
 
+    console.log("Name:", name);
+    console.log("Email:", email);
+
     try {
         const response = await fetch('/api/submit-form', {  // Updated to relative path
             method: 'POST',
