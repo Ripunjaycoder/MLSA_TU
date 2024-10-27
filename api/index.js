@@ -15,7 +15,7 @@ const pool = new Pool({
   user: process.env.SUPABASE_USER,
   password: process.env.SUPABASE_PASSWORD,
   port: process.env.SUPABASE_PORT,
-  ssl: { rejectUnauthorized: false },
+  ssl: true
   connectionTimeoutMillis: 10000,
 });
 
