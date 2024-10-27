@@ -5,32 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MLSA Registration</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <!-- MLSA Logo -->
         <header class="hero">
             <img src="WhatsApp Image 2023-08-25 at 07.39.25.jpg" alt="Be a force for good - Microsoft Learn Student Ambassador" width="100%">
         </header>
     
-        <!-- Section for Two More Images -->
         <div class="image-section">
-            <!-- Microsoft Learn Badge -->
             <div class="image-box">
                 <img src="download.png" alt="Microsoft Learn Student Ambassador Badge" width="200">
             </div>
-            
-            <!-- Tezpur University Logo -->
             <div class="image-box">
                 <img src="WhatsApp Image 2024-09-26 at 10.24.58_1a324971.jpg" alt="Tezpur University Logo" width="200">
             </div>
         </div>
 
         <h2>Register for MLSA Updates</h2>
-        <!-- Update form action to Node.js endpoint -->
-        <form action="https://mlsatu.vercel.app/" method="POST">
+        <form id="registration-form"> <!-- Removed action attribute -->
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -40,11 +33,9 @@
             <button type="submit">Register</button>
         </form>
 
-
         <div class="success-message" id="successMessage" style="display: none;">
             🎉 Thank you for registering! 🎉
         </div>
-        
 
         <div class="social-handles">
             <h3>Follow us on Social Media</h3>
